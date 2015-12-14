@@ -9,6 +9,108 @@ s0_t		tx
 s0_dl		tx
 s0_len		tx
 
+s0_v0	tx
+s0_v1	tx
+s0_v2	tx
+s0_v3	tx
+s0_v4	tx
+s0_v5 	tx
+s0_v6	tx
+s0_v7	tx
+s0_v8	tx
+s0_v9	tx
+s0_v10	tx
+s0_v11	tx
+s0_v12	tx
+s0_v13	tx
+s0_v14	tx
+s0_v15	tx
+s0_v16	tx
+s0_v17	tx
+s0_v18	tx
+s0_v19	tx
+s0_v20	tx
+s0_v21	tx
+s0_v22	tx
+s0_v23	tx
+s0_v24	tx
+s0_v25	tx
+s0_v26	tx
+s0_v27	tx
+s0_v28	tx
+s0_v29	tx
+s0_v30	tx
+s0_v31	tx
+s0_v32	tx
+s0_v33	tx
+s0_v34	tx
+s0_v35	tx
+s0_v36	tx
+s0_v37	tx
+s0_v38	tx
+s0_v39	tx
+s0_v40	tx
+s0_v41	tx
+s0_v42	tx
+s0_v43	tx
+s0_v44	tx
+s0_v45	tx
+s0_v46	tx
+s0_v47	tx
+s0_v48	tx
+s0_v49	tx
+
+s0_v0
+s0_v1
+s0_v2	
+s0_v3
+s0_v4
+s0_v5
+s0_v6
+s0_v7
+s0_v8
+s0_v9
+s0_v10
+s0_v11
+s0_v12
+s0_v13
+s0_v14
+s0_v15
+s0_v16
+s0_v17
+s0_v18
+s0_v19
+s0_v20
+s0_v21
+s0_v22
+s0_v23
+s0_v24
+s0_v25
+s0_v26
+s0_v27
+s0_v28
+s0_v29
+s0_v30
+s0_v31
+s0_v32
+s0_v33
+s0_v34
+s0_v35
+s0_v36
+s0_v37
+s0_v38
+s0_v39
+s0_v40
+s0_v41
+s0_v42
+s0_v43
+s0_v44
+s0_v45
+s0_v46
+s0_v47
+s0_v48
+s0_v49
+
 b0_ne
 b0_w
 b0_lemma

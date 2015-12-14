@@ -391,3 +391,7 @@ class Alphabet(object):
         return self._index_to_label == other._index_to_label and \
             self._label_to_index == other._label_to_index and \
             self.num_labels == other.num_labels
+    
+    def __iter__(self):
+        for k,v in self._index_to_label.iteritems():
+            yield k,v

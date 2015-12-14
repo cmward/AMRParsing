@@ -344,7 +344,14 @@ class GraphState(object):
         s0_atomics['brown8'] = s0_brown_repr[:8] if len(s0_brown_repr) > 7 else s0_brown_repr
         s0_atomics['brown10'] = s0_brown_repr[:10] if len(s0_brown_repr) > 9 else s0_brown_repr
         s0_atomics['brown20'] = s0_brown_repr[:20] if len(s0_brown_repr) > 19 else s0_brown_repr
-
+        
+        s0_vecs = WORD_VECS[s0_atomics['form']]
+        if s0_vecs is not '':
+            for i in range(50):
+                s0_atomics['v{}'.format(i)] = s0_vecs[i]
+        else:
+            for i in range(50):
+                s0_atomics['v{}'.format(i)] = None
         
         #s0_atomics['pfx'] = s0_atomics['form'][:4] if len(s0_atomics['form']) > 3 else s0_atomics['form']
         sprs2,sprs1,sp1,slsb,srsb,sr2sb=self.get_node_context(self.idx)        

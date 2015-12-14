@@ -1,6 +1,7 @@
 # all the constants 
 import numpy as np
 import re
+import glob
 from os import listdir
 from collections import defaultdict
 
@@ -159,6 +160,9 @@ FEATS_ABBR['txv'] = 'txv'
 FEATS_ABBR['txn'] = 'txn'
 FEATS_ABBR['txdelta'] = 'txdelta'
 
+for i in range(50):
+    FEATS_ABBR['v{}'.format(i)] = 'v{}'.format(i)
+
 DEFAULT_RULE_FILE = './rules/dep2amrLabelRules'
 
 def _load_rules(rule_file):
@@ -204,6 +208,19 @@ def _load_brown_cluster(dir_path,cluster_num=1000):
     return cluster_dict
 
 BROWN_CLUSTER=_load_brown_cluster(DEFAULT_BROWN_CLUSTER)
+
+DEFAULT_WORD_VECS = './resources/embeddings/gs50.txt'
+
+def _load_word_vecs(model_file, dim=50):
+    vec_dict = defaultdict(str)
+    with open(model_file) as infile:
+        for line in infile:
+            line = line.split()
+            word, vec = line[0], np.array(line[1:], dtype=WEIGHT_DTYPE)
+            vec_dict[word] = vec
+    return vec_dict
+
+WORD_VECS = _load_word_vecs(DEFAULT_WORD_VECS)
 
 # given different domain, return range of split corpus #TODO: move this part to config file
 def get_corpus_range(corpus_section,corpus_type):

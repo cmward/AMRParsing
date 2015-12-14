@@ -303,8 +303,8 @@ def main():
         print "Incorporate Coref Information: %s"%(constants.FLAG_COREF)
         print "Incorporate SRL Information: %s"%(constants.FLAG_PROP)
         print "Dependency parser used: %s"%(constants.FLAG_DEPPARSER)
-        train_instances = preprocess(amr_file,START_SNLP=False)        
-        if args.dev: dev_instances = preprocess(args.dev,START_SNLP=False)
+        train_instances = preprocess(amr_file,START_SNLP=True)        
+        if args.dev: dev_instances = preprocess(args.dev,START_SNLP=True)
 
 
         if args.section != 'all':

@@ -41,3 +41,5 @@ Thumbs.db
 model/*
 *.m
 stanfordnlp
+resources/embeddings/*
+amr-release*

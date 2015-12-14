@@ -277,6 +277,13 @@ class Model():
         definition_str += "%sif dist1 > 10: dist1=10\n"%(Model.indent)
         definition_str += "%sdist2=abs(a0['id']-b0['id']) if b0 and a0 and b0 is not ABT_TOKEN and a0 is not ABT_TOKEN else EMPTY\n"%(Model.indent)
         definition_str += "%sif dist2 > 10: dist2=10\n"%(Model.indent)
+        
+        #for i in range(50):
+        #    definition_str += "{}s_v{}=WORD_VECS[s0['form']][{}] if WORD_VECS[s0['form']] is not '' else EMPTY\n".format(Model.indent, i, i) 
+        #for i in range(50):
+        #    definition_str += "{}if s_v{} is not None: feats.append('s_v{}=s_v{}.format({}, {})')\n".format(
+        #            Model.indent, i, i, i, i, i)
+    
 
         #definition_str += "%seqfrmset=s0['eqfrmset']\n"%(Model.indent)
         output.write(definition_str)

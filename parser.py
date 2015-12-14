@@ -126,7 +126,7 @@ class Parser(object):
                 #r = n_correct_total/n_gold_total if n_gold_total != .0 else .0
                 print >> self.elog,"Over "+str(i)+" sentences ","Accuracy:%s" % (p)
 
-        print >> self.elog,"One pass on %s instances takes %s" % (str(i),datetime.timedelta(seconds=round(time.time()-start_time,0)))
+        #print >> self.elog,"One pass on %s instances takes %s" % (str(i),datetime.timedelta(seconds=round(time.time()-start_time,0)))
         pt = n_correct_total/n_parsed_total if n_parsed_total != .0 else .0
         #r = n_correct_total/n_gold_total
         #f = 2*p*r/(p+r)
