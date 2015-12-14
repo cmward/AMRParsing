@@ -345,10 +345,10 @@ class GraphState(object):
         s0_atomics['brown10'] = s0_brown_repr[:10] if len(s0_brown_repr) > 9 else s0_brown_repr
         s0_atomics['brown20'] = s0_brown_repr[:20] if len(s0_brown_repr) > 19 else s0_brown_repr
         
-        s0_vecs = WORD_VECS[s0_atomics['form']]
-        if s0_vecs is not '':
+        s0_word_vec = WORD_VECS[s0_atomics['form']]
+        if s0_word_vec is not '':
             for i in range(50):
-                s0_atomics['v{}'.format(i)] = s0_vecs[i]
+                s0_atomics['v{}'.format(i)] = s0_word_vec[i]
         else:
             for i in range(50):
                 s0_atomics['v{}'.format(i)] = None
@@ -408,6 +408,13 @@ class GraphState(object):
         
         if self.cidx and self.cidx != START_ID:
             b0_atomics = GraphState.sent[self.cidx].copy() if isinstance(self.cidx,int) else ABT_TOKEN #GraphState.abt_tokens[self.cidx]
+            b0_word_vec = WORD_VECS[b0_atomics['form']]
+            if b0_word_vec is not '':
+                for i in range(50):
+                    b0_atomics['v{}'.format(i)] = b0_word_vec[i]
+            else:
+                for i in range(50):
+                    b0_atomics['v{}'.format(i)] = None
             b0_brown_repr = BROWN_CLUSTER[b0_atomics['form']]
             b0_atomics['brown4'] = b0_brown_repr[:4] if len(b0_brown_repr) > 3 else b0_brown_repr
             b0_atomics['brown6'] = b0_brown_repr[:6] if len(b0_brown_repr) > 5 else b0_brown_repr

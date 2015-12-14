@@ -68,6 +68,56 @@ def generate_features(state,action):
     b0_dl=b0['rel'] if b0 else EMPTY
     b0_len=b0['len'] if b0 else EMPTY
     b0_reph=b0['reph'] if b0 else EMPTY
+    b0_v0=b0['v0'] if b0 else EMPTY
+    b0_v1=b0['v1'] if b0 else EMPTY
+    b0_v2=b0['v2'] if b0 else EMPTY
+    b0_v3=b0['v3'] if b0 else EMPTY
+    b0_v4=b0['v4'] if b0 else EMPTY
+    b0_v5=b0['v5'] if b0 else EMPTY
+    b0_v6=b0['v6'] if b0 else EMPTY
+    b0_v7=b0['v7'] if b0 else EMPTY
+    b0_v8=b0['v8'] if b0 else EMPTY
+    b0_v9=b0['v9'] if b0 else EMPTY
+    b0_v10=b0['v10'] if b0 else EMPTY
+    b0_v11=b0['v11'] if b0 else EMPTY
+    b0_v12=b0['v12'] if b0 else EMPTY
+    b0_v13=b0['v13'] if b0 else EMPTY
+    b0_v14=b0['v14'] if b0 else EMPTY
+    b0_v15=b0['v15'] if b0 else EMPTY
+    b0_v16=b0['v16'] if b0 else EMPTY
+    b0_v17=b0['v17'] if b0 else EMPTY
+    b0_v18=b0['v18'] if b0 else EMPTY
+    b0_v19=b0['v19'] if b0 else EMPTY
+    b0_v20=b0['v20'] if b0 else EMPTY
+    b0_v21=b0['v21'] if b0 else EMPTY
+    b0_v22=b0['v22'] if b0 else EMPTY
+    b0_v23=b0['v23'] if b0 else EMPTY
+    b0_v24=b0['v24'] if b0 else EMPTY
+    b0_v25=b0['v25'] if b0 else EMPTY
+    b0_v26=b0['v26'] if b0 else EMPTY
+    b0_v27=b0['v27'] if b0 else EMPTY
+    b0_v28=b0['v28'] if b0 else EMPTY
+    b0_v29=b0['v29'] if b0 else EMPTY
+    b0_v30=b0['v30'] if b0 else EMPTY
+    b0_v31=b0['v31'] if b0 else EMPTY
+    b0_v32=b0['v32'] if b0 else EMPTY
+    b0_v33=b0['v33'] if b0 else EMPTY
+    b0_v34=b0['v34'] if b0 else EMPTY
+    b0_v35=b0['v35'] if b0 else EMPTY
+    b0_v36=b0['v36'] if b0 else EMPTY
+    b0_v37=b0['v37'] if b0 else EMPTY
+    b0_v38=b0['v38'] if b0 else EMPTY
+    b0_v39=b0['v39'] if b0 else EMPTY
+    b0_v40=b0['v40'] if b0 else EMPTY
+    b0_v41=b0['v41'] if b0 else EMPTY
+    b0_v42=b0['v42'] if b0 else EMPTY
+    b0_v43=b0['v43'] if b0 else EMPTY
+    b0_v44=b0['v44'] if b0 else EMPTY
+    b0_v45=b0['v45'] if b0 else EMPTY
+    b0_v46=b0['v46'] if b0 else EMPTY
+    b0_v47=b0['v47'] if b0 else EMPTY
+    b0_v48=b0['v48'] if b0 else EMPTY
+    b0_v49=b0['v49'] if b0 else EMPTY
     a0_ne=a0['ne'] if a0 else EMPTY
     a0_w=a0['form'] if a0 else EMPTY
     a0_lemma=a0['lemma'] if a0 else EMPTY
@@ -201,6 +251,56 @@ def generate_features(state,action):
     if [b0_dl] != 1*[None]:feats.append('b0_dl=%s_' % (b0_dl))
     if [b0_len] != 1*[None]:feats.append('b0_len=%s_' % (b0_len))
     if [b0_reph] != 1*[None]:feats.append('b0_reph=%s_' % (b0_reph))
+    if [b0_v0] != 1*[None]:feats.append('b0_v0=%s_' % (b0_v0))
+    if [b0_v1] != 1*[None]:feats.append('b0_v1=%s_' % (b0_v1))
+    if [b0_v2] != 1*[None]:feats.append('b0_v2=%s_' % (b0_v2))
+    if [b0_v3] != 1*[None]:feats.append('b0_v3=%s_' % (b0_v3))
+    if [b0_v4] != 1*[None]:feats.append('b0_v4=%s_' % (b0_v4))
+    if [b0_v5] != 1*[None]:feats.append('b0_v5=%s_' % (b0_v5))
+    if [b0_v6] != 1*[None]:feats.append('b0_v6=%s_' % (b0_v6))
+    if [b0_v7] != 1*[None]:feats.append('b0_v7=%s_' % (b0_v7))
+    if [b0_v8] != 1*[None]:feats.append('b0_v8=%s_' % (b0_v8))
+    if [b0_v9] != 1*[None]:feats.append('b0_v9=%s_' % (b0_v9))
+    if [b0_v10] != 1*[None]:feats.append('b0_v10=%s_' % (b0_v10))
+    if [b0_v11] != 1*[None]:feats.append('b0_v11=%s_' % (b0_v11))
+    if [b0_v12] != 1*[None]:feats.append('b0_v12=%s_' % (b0_v12))
+    if [b0_v13] != 1*[None]:feats.append('b0_v13=%s_' % (b0_v13))
+    if [b0_v14] != 1*[None]:feats.append('b0_v14=%s_' % (b0_v14))
+    if [b0_v15] != 1*[None]:feats.append('b0_v15=%s_' % (b0_v15))
+    if [b0_v16] != 1*[None]:feats.append('b0_v16=%s_' % (b0_v16))
+    if [b0_v17] != 1*[None]:feats.append('b0_v17=%s_' % (b0_v17))
+    if [b0_v18] != 1*[None]:feats.append('b0_v18=%s_' % (b0_v18))
+    if [b0_v19] != 1*[None]:feats.append('b0_v19=%s_' % (b0_v19))
+    if [b0_v20] != 1*[None]:feats.append('b0_v20=%s_' % (b0_v20))
+    if [b0_v21] != 1*[None]:feats.append('b0_v21=%s_' % (b0_v21))
+    if [b0_v22] != 1*[None]:feats.append('b0_v22=%s_' % (b0_v22))
+    if [b0_v23] != 1*[None]:feats.append('b0_v23=%s_' % (b0_v23))
+    if [b0_v24] != 1*[None]:feats.append('b0_v24=%s_' % (b0_v24))
+    if [b0_v25] != 1*[None]:feats.append('b0_v25=%s_' % (b0_v25))
+    if [b0_v26] != 1*[None]:feats.append('b0_v26=%s_' % (b0_v26))
+    if [b0_v27] != 1*[None]:feats.append('b0_v27=%s_' % (b0_v27))
+    if [b0_v28] != 1*[None]:feats.append('b0_v28=%s_' % (b0_v28))
+    if [b0_v29] != 1*[None]:feats.append('b0_v29=%s_' % (b0_v29))
+    if [b0_v30] != 1*[None]:feats.append('b0_v30=%s_' % (b0_v30))
+    if [b0_v31] != 1*[None]:feats.append('b0_v31=%s_' % (b0_v31))
+    if [b0_v32] != 1*[None]:feats.append('b0_v32=%s_' % (b0_v32))
+    if [b0_v33] != 1*[None]:feats.append('b0_v33=%s_' % (b0_v33))
+    if [b0_v34] != 1*[None]:feats.append('b0_v34=%s_' % (b0_v34))
+    if [b0_v35] != 1*[None]:feats.append('b0_v35=%s_' % (b0_v35))
+    if [b0_v36] != 1*[None]:feats.append('b0_v36=%s_' % (b0_v36))
+    if [b0_v37] != 1*[None]:feats.append('b0_v37=%s_' % (b0_v37))
+    if [b0_v38] != 1*[None]:feats.append('b0_v38=%s_' % (b0_v38))
+    if [b0_v39] != 1*[None]:feats.append('b0_v39=%s_' % (b0_v39))
+    if [b0_v40] != 1*[None]:feats.append('b0_v40=%s_' % (b0_v40))
+    if [b0_v41] != 1*[None]:feats.append('b0_v41=%s_' % (b0_v41))
+    if [b0_v42] != 1*[None]:feats.append('b0_v42=%s_' % (b0_v42))
+    if [b0_v43] != 1*[None]:feats.append('b0_v43=%s_' % (b0_v43))
+    if [b0_v44] != 1*[None]:feats.append('b0_v44=%s_' % (b0_v44))
+    if [b0_v45] != 1*[None]:feats.append('b0_v45=%s_' % (b0_v45))
+    if [b0_v46] != 1*[None]:feats.append('b0_v46=%s_' % (b0_v46))
+    if [b0_v47] != 1*[None]:feats.append('b0_v47=%s_' % (b0_v47))
+    if [b0_v48] != 1*[None]:feats.append('b0_v48=%s_' % (b0_v48))
+    if [b0_v49] != 1*[None]:feats.append('b0_v49=%s_' % (b0_v49))
     if [a0_ne] != 1*[None]:feats.append('a0_ne=%s_' % (a0_ne))
     if [a0_w] != 1*[None]:feats.append('a0_w=%s_' % (a0_w))
     if [a0_lemma] != 1*[None]:feats.append('a0_lemma=%s_' % (a0_lemma))
