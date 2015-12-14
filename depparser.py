@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os,subprocess
+import os,subprocess,sys
 
 VERBOSE = True
 
@@ -56,7 +56,7 @@ class StanfordDepParser(DepParser):
        
         # if CoreNLP libraries are in a different directory,
         # change the corenlp_path variable to point to them
-        stanford_path = "/home/j/llc/cwang24/R_D/AMRParsing/stanfordnlp/stanford-parser/"
+        stanford_path = "stanfordnlp/stanford-parser/"
         
         java_path = "java"
         classname = "edu.stanford.nlp.parser.lexparser.LexicalizedParser"
@@ -74,8 +74,9 @@ class StanfordDepParser(DepParser):
 
         #Change from ':' to ';'
         # spawn the server
-        start_depparser = "%s -Xmx2500m -cp %s %s %s %s %s" % (java_path, ':'.join(jars), classname, flags, model, sent_filename)
-        if VERBOSE: print start_depparser
+        start_depparser = "%s -Xmx2500m -cp %s %s %s %s %s" % (java_path, 
+                ':'.join(jars), classname, flags, model, sent_filename)
+        print start_depparser
         #incoming = pexpect.run(start_depparser)    
         process = subprocess.Popen(start_depparser.split(),shell=False,stdout=subprocess.PIPE)
         incoming = process.communicate()[0]

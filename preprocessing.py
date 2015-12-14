@@ -298,7 +298,7 @@ def preprocess(input_file,START_SNLP=True,INPUT_AMR=True):
     if constants.FLAG_DEPPARSER == "stanford":
         dep_filename = tok_sent_filename+'.stanford.dep'
         if os.path.exists(dep_filename):
-            print 'Read dependency file %s...' % (dep_filename)                                                                 
+            print 'Read already existing dependency file %s...' % (dep_filename)                                                                 
             dep_result = open(dep_filename,'r').read()
         else:
             dparser = StanfordDepParser()
