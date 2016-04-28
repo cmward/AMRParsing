@@ -241,6 +241,7 @@ def preprocess(input_file,START_SNLP=True,INPUT_AMR=True):
         amr_file = input_file
         aligned_amr_file = amr_file + '.amr.tok.aligned'
         if os.path.exists(aligned_amr_file):
+            print "Found aligned file"
             comments,amr_strings = readAMR(aligned_amr_file)
         else:
             comments,amr_strings = readAMR(amr_file)
@@ -254,16 +255,22 @@ def preprocess(input_file,START_SNLP=True,INPUT_AMR=True):
         proc1 = StanfordCoreNLP()
 
         # preprocess 1: tokenization, POS tagging and name entity using Stanford CoreNLP
+        
         if START_SNLP: proc1.setup()
         instances = proc1.parse(tmp_sent_filename)
+        
 
         tok_sent_filename = tmp_sent_filename+'.tok' # write tokenized sentence file
         if not os.path.exists(tok_sent_filename):
             _write_tok_sentences(tok_sent_filename,instances)
+        else:
+            print "found .tok file"
 
         tok_amr_filename = amr_file + '.amr.tok'
         if not os.path.exists(tok_amr_filename): # write tokenized amr file
             _write_tok_amr(tok_amr_filename,amr_file,instances)
+        else:
+            print "Found .amr.tok file"
             
         SpanGraph.graphID = 0
         for i in range(len(instances)):

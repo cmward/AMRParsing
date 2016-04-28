@@ -211,7 +211,7 @@ BROWN_CLUSTER=_load_brown_cluster(DEFAULT_BROWN_CLUSTER)
 
 DEFAULT_WORD_VECS = './resources/embeddings/gs50.txt'
 
-def _load_word_vecs(model_file, dim=50):
+def _load_word_vecs(model_file):
     vec_dict = defaultdict(str)
     with open(model_file) as infile:
         for line in infile:

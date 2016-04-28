@@ -43,3 +43,4 @@ model/*
 stanfordnlp
 resources/embeddings/*
 amr-release*
+split/*

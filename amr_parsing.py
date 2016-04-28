@@ -303,8 +303,8 @@ def main():
         print "Incorporate Coref Information: %s"%(constants.FLAG_COREF)
         print "Incorporate SRL Information: %s"%(constants.FLAG_PROP)
         print "Dependency parser used: %s"%(constants.FLAG_DEPPARSER)
-        train_instances = preprocess(amr_file,START_SNLP=True)        
-        if args.dev: dev_instances = preprocess(args.dev,START_SNLP=True)
+        train_instances = preprocess(amr_file,START_SNLP=False)        
+        if args.dev: dev_instances = preprocess(args.dev,START_SNLP=False)
 
 
         if args.section != 'all':
@@ -317,7 +317,7 @@ def main():
 
         
         feat_template = args.feat if args.feat else None
-        model = Model(elog=experiment_log)
+        model = Model(elog=sys.stdout)
         #model.output_feature_generator()
         parser = Parser(model=model,oracle_type=DET_T2G_ORACLE_ABT,action_type=args.actionset,verbose=args.verbose,elog=experiment_log)
         model.setup(action_type=args.actionset,instances=train_instances,parser=parser,feature_templates_file=feat_template)
@@ -335,7 +335,7 @@ def main():
             model.save_model(args.model+'-iter'+str(iter)+'.m')
             if args.dev:
                 print >> experiment_log ,"Result on develop set:"                
-                _,parsed_amr = parser.parse_corpus_test(dev_instances)
+                _,parsed_amr = parser.parse_corpus_test(dev_instances, EVAL=True)
                 write_parsed_amr(parsed_amr,dev_instances,args.dev,args.section+'.'+str(iter)+'.parsed')
 
         print >> experiment_log ,"DONE TRAINING!"

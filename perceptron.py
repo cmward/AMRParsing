@@ -4,7 +4,7 @@ import numpy as np
 from constants import WEIGHT_DTYPE
 
 class Perceptron():
-    
+
     #model = None
     #num_updates = 0
     #wstep = 1

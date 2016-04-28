@@ -343,7 +343,7 @@ class Model():
         except:
             print >> sys.stderr, 'Saving model error', sys.exc_info()[0]
             pass
-
+        
 
         #self.weight = weight
         #self.aux_weight = aux_weight
@@ -358,7 +358,7 @@ class Model():
         #tmp = sys.path.pop(0)
         #model.avg_weight = np.load(open(model_filename+'.weight', 'rb'))
         #sys.path.insert(0,tmp)
-        return model
+        #return model
         #return pickle.load(open(model_filename,'rb'))
         '''
         model_dict = json.load(open(model_filename,'rb'))
